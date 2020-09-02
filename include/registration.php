@@ -1,24 +1,25 @@
 <?php
 session_start();
-
 include "config.php";
 
 $errors = array();
 
-// connect to the database
+//------ connect to the database --------//
 $db = new mysqli($host, $user, $password, $dbname);
 
-// Check connection
+
+//------ Check connection ---------------//
 if ($db->connect_error) {
   die("Connection failed: " . $db->connect_error);
 }
 echo "Connected successfully";
 
-// REGISTER USER
+
+//------- REGISTER USER ----------------- //
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-  // receive all input values from the form
+  // ------- Receive all input values from the form ----//
   $username = $_POST['email'];
   $email = $_POST['email'];
   $password_1 = $_POST['form_passd'];
@@ -32,14 +33,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $phone = $_POST['phone'];
   $gender = $_POST['gender'];
 
-
+  $passd =   $password_1;
   //	$passd = md5($password_1);//encrypt the password before saving in the database
 
   	$query = "INSERT INTO members (FirstName, LastName, PwdUsers, EmailUser, AddrUsers, SubUsers, PCUsers, StateUsers, PhoneUsers, Genders) VALUES ('$fname','$lname','$passd','$email','$addr','$sub','$postcode','$state','$phone','$gender')";
   	mysqli_query($db, $query);
-  	$_SESSION['username'] = $username;
-  	$_SESSION['success'] = "You are now logged in";
-  	header('location: ../index.html');
+
+  	header('location: ../index.php');
 
 }
 ?>

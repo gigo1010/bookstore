@@ -1,3 +1,11 @@
+<?php
+include('include/login.php'); // Includes Login Script
+
+if(isset($_SESSION['username'])){
+header("location: members.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -90,7 +98,7 @@
                                         class="close" title="Close Modal">&times;</span>
 
                                         <!-- Modal Content -->
-                                        <form class="modal-content animate" action="/restaurant/include/login.php" method="post">
+                                        <form class="modal-content animate" action="/bookstore/include/login.php" method="post">
                                           <div class="imgcontainer">
                                                 <img src="images2/avatar.png" alt="Avatar" class="avatar">
                                           </div>
@@ -278,7 +286,7 @@
                         <h4 class="form-title">REGISTRATION FORM</h4>
                         <p>PLEASE FILL OUT ALL REQUIRED* FIELDS TO BECOME A MEMBER. THANKS!</p>
 
-                        <form method="post" name="contactform" action="/restaurant/include/registration.php">
+                        <form method="post" name="contactform" action="/bookstore/include/registration.php">
                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-box">
                                     <input type="text" name="form_fname" id="form_name" placeholder="First Name" required="required" data-error="Firstname is required.">
@@ -526,6 +534,7 @@
             modal.style.display = "none";
           }
         }
+
     </script>
 
 </body>

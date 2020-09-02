@@ -1,13 +1,11 @@
 <?php
   session_start();
   if (!isset($_SESSION["username"])) {
-    header('location: /bookstore/index.html');
+
+    header('location: /bookstore/index.php');
 
   }else {
-
-
     $login_session = $_SESSION['username'];
-
 }
 
 ?>
@@ -73,7 +71,7 @@
                                 </button>
                                 <div class="logo">
                                     <a class="navbar-brand js-scroll-trigger logo-header" href="#">
-                                        <img src="images2/logo.png" alt="">
+                                        <img src="images2/logo_book.png" alt="">
                                     </a>
 
                                 </div>
@@ -81,9 +79,9 @@
                             </div>
                             <div id="navbar" class="navbar-collapse collapse">
                                 <ul class="nav navbar-nav navbar-right">
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="/restaurant/index.html#about">About us</a></li>
-                                    <li class="active"><a href="/restaurant/members.html">Members</a></li>
+                                    <li><a href="index.php">Home</a></li>
+                                    <li><a href="/bookstore/index.php#about">About us</a></li>
+                                    <li class="active"><a href="/bookstore/members.php">Members</a></li>
                                     <li><a href="#footer">Contact us</a></li>
                                     <li>
                                       <div class="search-container">
@@ -95,7 +93,7 @@
                                     </li>
                                     <li>
                                       <div class="login-container">
-                                          <form action = "/restaurant/include/logout.php">
+                                          <form action = "/bookstore/include/logout.php">
                                           <button type="submit">Logout</button>
                                         </form>
                                       </div>

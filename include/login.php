@@ -22,11 +22,12 @@ if (isset($_POST['login_btn'])) {
   	$results = mysqli_query($conn, $query);
     $row_cnt = mysqli_num_rows($results);
   	if (mysqli_num_rows($results) == 1) {
-  	  $_SESSION['username'] = $username;
+      $row = mysqli_fetch_array($results);
+  	  $_SESSION['username'] = $row['FirstName'];
   	  $_SESSION['success'] = "You are now logged in";
   	  header('location: ../members.php');
   	}else {
-      header('location: ../index.html');
+      header('location: ../index.php#registration');
   	}
   }
 }
