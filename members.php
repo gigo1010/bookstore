@@ -83,14 +83,7 @@
                                     <li><a href="/bookstore/index.php#about">About us</a></li>
                                     <li class="active"><a href="/bookstore/members.php">Members</a></li>
                                     <li><a href="#footer">Contact us</a></li>
-                                    <li>
-                                      <div class="search-container">
-                                      <form action="/action_page.php">
-                                        <input type="text" placeholder="Search.." name="search">
-                                        <button type="submit"><i class="fa fa-search"></i></button>
-                                      </form>
-                                    </div>
-                                    </li>
+
                                     <li>
                                       <div class="login-container">
                                           <form action = "/bookstore/include/logout.php">
@@ -157,10 +150,8 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
-                        <h2 class="block-title text-center">
-						Our Products
-					</h2>
-                        <p class="title-caption text-center">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
+                        <h2 class="block-title text-center">Books on Store</h2>
+                        <p class="title-caption text-center">Here you can find our books for rent. If you want to rent any book, just check its availability for add to your cart.</p>
                     </div>
                     <div class="tab-menu" >
                         <div class="slider slider-nav">
