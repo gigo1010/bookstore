@@ -1,9 +1,15 @@
 <?php
-
 session_start();
+if (!isset($_SESSION["username"])) {
 
-require_once ("php/CreateDb.php");
-require_once ("php/component.php");
+  header('location: /bookstore/index.php');
+
+}else {
+  $login_session = $_SESSION['username'];
+}
+
+require_once ("include/Classes/GetData.php");
+require_once ("include/Classes/component.php");
 
 $db = new CreateDb("Productdb", "Producttb");
 
@@ -18,7 +24,6 @@ if (isset($_POST['remove'])){
       }
   }
 }
-
 
 ?>
 
@@ -40,9 +45,9 @@ if (isset($_POST['remove'])){
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-light">
-
+  
 <?php
-    require_once ('php/header.php');
+    require_once ('include/header.php');
 ?>
 
 <div class="container-fluid">
@@ -70,7 +75,6 @@ if (isset($_POST['remove'])){
                     }else{
                         echo "<h5>Cart is Empty</h5>";
                     }
-
                 ?>
 
             </div>

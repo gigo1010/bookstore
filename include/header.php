@@ -1,11 +1,20 @@
 
 <header id="header">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a href="index.php" class="navbar-brand">
+      <div style="padding-left:10%;">
+        <img style="height:50px;" src="images2/logo_book.png" alt="">
+      </div>
+        <div style="padding-left:20px;">
+            <form action = "/bookstore/include/logout.php">
+            <button type="submit">Logout</button>
+          </form>
+        </div>
+        <a href="members.php" class="navbar-brand">
             <h3 class="px-5">
                 <i class="fas fa-shopping-basket"></i> Shopping Cart
             </h3>
         </a>
+        </div>
         <button class="navbar-toggler"
             type="button"
                 data-toggle="collapse"
@@ -16,7 +25,10 @@
         >
             <span class="navbar-toggler-icon"></span>
         </button>
+        <div style="float: right;color: #e75b1e;padding-right: 0%; padding-left: 20%; position:sticky;" >
+            <b id="welcome">Welcome : <i><?php echo $login_session; ?></i></b>
 
+        </div>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="mr-auto"></div>
             <div class="navbar-nav">
@@ -38,11 +50,6 @@
             </div>
         </div>
 
+
     </nav>
 </header>
-
-
-
-
-
-
